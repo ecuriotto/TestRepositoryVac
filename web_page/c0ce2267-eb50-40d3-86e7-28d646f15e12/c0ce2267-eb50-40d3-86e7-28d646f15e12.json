@@ -1,0 +1,518 @@
+{
+  "designerVersion" : "1.8.29",
+  "previousDesignerVersion" : "1.7.25",
+  "id" : "c0ce2267-eb50-40d3-86e7-28d646f15e12",
+  "name" : "reviewForm",
+  "lastUpdate" : 1552465927649,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Review vacation request"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 2"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "34a99053-a13e-488c-9732-ad6d98f36b0c",
+    "hasValidationError" : false,
+    "id" : "pbTitle"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 3,
+      "md" : 3,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Start Date"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation",
+        "value" : "MM/dd/yyyy"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.startDate"
+      },
+      "dateFormat" : {
+        "type" : "constant",
+        "value" : "MM/dd/yyyy"
+      }
+    },
+    "reference" : "724a2675-1179-406c-b7e2-8f018ef8bea6",
+    "hasValidationError" : false,
+    "id" : "pbDatePicker"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 3,
+      "md" : 3,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "minLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "maxLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Number of Days"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.numberOfDays"
+      },
+      "type" : {
+        "type" : "constant",
+        "value" : "text"
+      },
+      "min" : {
+        "type" : "constant"
+      },
+      "max" : {
+        "type" : "constant"
+      },
+      "step" : {
+        "type" : "constant",
+        "value" : 1
+      }
+    },
+    "reference" : "7dc8977a-fe58-4a0a-81ad-64e1d89c2584",
+    "hasValidationError" : false,
+    "id" : "pbInput"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 3,
+      "md" : 3,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Return Date"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "placeholder" : {
+        "type" : "interpolation",
+        "value" : "MM/dd/yyyy"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "vacationRequestBusinessData.returnDate"
+      },
+      "dateFormat" : {
+        "type" : "constant",
+        "value" : "MM/dd/yyyy"
+      }
+    },
+    "reference" : "0413b499-3b40-4112-9652-034897a289b2",
+    "hasValidationError" : false,
+    "id" : "pbDatePicker"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 3,
+      "md" : 3,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "disabled" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "Status"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      },
+      "inline" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "availableValues" : {
+        "type" : "constant",
+        "value" : [ "approved", "refused" ]
+      },
+      "displayedKey" : {
+        "type" : "constant"
+      },
+      "returnedKey" : {
+        "type" : "constant"
+      },
+      "selectedValue" : {
+        "type" : "variable",
+        "value" : "formInput.statusContract"
+      }
+    },
+    "reference" : "8ed3b6d6-f34c-40d1-97e3-3dac81f1d4c9",
+    "hasValidationError" : false,
+    "id" : "pbRadioButtons"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 1
+      },
+      "isDisplayed" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "placeholder" : {
+        "type" : "constant",
+        "value" : "For a refused request, a mandatory comment explaining why the request was refused. For an approved request, a comment is optional."
+      },
+      "class" : {
+        "type" : "constant",
+        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+      },
+      "label" : {
+        "type" : "constant",
+        "value" : "Comment"
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "type" : {
+        "type" : "constant",
+        "value" : "text"
+      },
+      "dimension" : {
+        "type" : "constant",
+        "value" : 12
+      },
+      "widgetId" : {
+        "type" : "constant",
+        "value" : "pbInput"
+      },
+      "value" : {
+        "type" : "variable",
+        "value" : "formInput.commentsContract"
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readonly" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "required" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "minLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "maxLength" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "readOnly" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "min" : {
+        "type" : "constant"
+      },
+      "max" : {
+        "type" : "constant"
+      },
+      "step" : {
+        "type" : "constant",
+        "value" : 1
+      }
+    },
+    "reference" : "1bb521d4-70ff-45ee-b5ac-5e1fdaeadfb2",
+    "hasValidationError" : false,
+    "id" : "pbInput"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "alignment" : {
+        "type" : "constant",
+        "value" : "center"
+      },
+      "isDisplayed" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "targetUrlOnSuccess" : {
+        "type" : "interpolation",
+        "value" : "/bonita/apps/tahiti/management/"
+      },
+      "class" : {
+        "type" : "constant",
+        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+      },
+      "label" : {
+        "type" : "constant",
+        "value" : "Submit"
+      },
+      "collectionPosition" : {
+        "type" : "constant"
+      },
+      "buttonStyle" : {
+        "type" : "constant",
+        "value" : "primary"
+      },
+      "dimension" : {
+        "type" : "constant",
+        "value" : 12
+      },
+      "collectionToModify" : {
+        "type" : "variable"
+      },
+      "widgetId" : {
+        "type" : "constant",
+        "value" : "pbButton"
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "action" : {
+        "type" : "constant",
+        "value" : "Submit task"
+      },
+      "dataToSend" : {
+        "type" : "variable",
+        "value" : "formOutput"
+      },
+      "readonly" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "disabled" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "url" : {
+        "type" : "interpolation"
+      },
+      "dataFromSuccess" : {
+        "type" : "variable"
+      },
+      "dataFromError" : {
+        "type" : "variable"
+      },
+      "valueToAdd" : {
+        "type" : "constant"
+      },
+      "removeItem" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "27e7f4fd-f60e-406c-a691-7d3eaeb01fc5",
+    "hasValidationError" : false,
+    "id" : "pbButton"
+  } ] ],
+  "assets" : [ {
+    "id" : "af585a3b-dce8-4e7d-8b94-0b12c3828bbe",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "1976de40-3344-465f-a071-6ceb90c848fc",
+    "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+    "type" : "js",
+    "order" : 2,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "return {\n\t'statusContract': $data.formInput.statusContract,\n\t'commentsContract': $data.formInput.commentsContract\n};",
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : "/bonita/API/bpm/userTask/{{taskId}}/context",
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"statusContract\" : \"\",\r\n  \"commentsContract\" : \"\"\r\n}",
+      "exposed" : false
+    },
+    "vacationRequestBusinessData" : {
+      "type" : "url",
+      "value" : "../{{context.vacationRequest_ref.link}}",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "c0ce2267-eb50-40d3-86e7-28d646f15e12",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "reviewForm"
+}

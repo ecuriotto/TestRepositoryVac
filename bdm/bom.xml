@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.4.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.VacationRequest">
+            <fields>
+                <field type="LONG" length="255" name="requesterBonitaBPMId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="reviewerBonitaBPMId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="startDate" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="returnDate" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="numberOfDays" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="comments" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="calendarEventId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="newRequestProcessInstanceId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.VacationAvailable">
+            <fields>
+                <field type="LONG" length="255" name="bonitaBPMId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="daysAvailableCounter" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

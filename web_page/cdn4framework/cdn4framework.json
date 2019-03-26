@@ -1,0 +1,67 @@
+{
+  "designerVersion" : "1.8.29",
+  "previousDesignerVersion" : "1.7.57",
+  "id" : "cdn4framework",
+  "name" : "cdn4framework",
+  "lastUpdate" : 1552467065599,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "<a href=\"https://community.bonitasoft.com/blog/how-share-resources-between-several-pages-living-application\">\nFull guide here\n</a>"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "163a8511-525d-45c8-a477-69eebb4be951",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ] ],
+  "assets" : [ {
+    "id" : "14c75c01-d5f6-4dbe-aed6-9a5c7c5c03a9",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "cda290ce-79f1-4a39-bc8e-3139726be84c",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "fb9551e7-d85d-4f5d-898c-1bb8e0bfac20",
+    "name" : "modal.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "hasValidationError" : false,
+  "uuid" : "5ee1811e-0a06-4b11-b74f-8833df3d0a09",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "cdn4framework"
+}

@@ -1,0 +1,395 @@
+{
+  "designerVersion" : "1.8.29",
+  "previousDesignerVersion" : "1.7.25",
+  "id" : "242d6e3c-0833-4cc3-a58a-d9d46701df95",
+  "name" : "VacationManagerProvided",
+  "lastUpdate" : 1552468447559,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 12,
+      "md" : 12,
+      "sm" : 12,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : "alert alert-danger"
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "managerTeamInfo.isManager"
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "<b><span class=\"glyphicon glyphicon-warning-sign\"></span></b> You need to be a manager to access this Page."
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      }
+    },
+    "reference" : "1f1c9da0-7e1d-4d62-a23e-e1d9e75f90c3",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "lg" : 12,
+      "md" : 12,
+      "sm" : 12,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "expression",
+        "value" : "!managerTeamInfo.isManager"
+      },
+      "repeatedCollection" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "e73cb54c-64ec-47e1-9eb9-bdbf23800d49",
+    "hasValidationError" : false,
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "lg" : 12,
+        "md" : 12,
+        "sm" : 12,
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Team vacation"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 2"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "9e7f3f00-aab6-43db-a769-f78add78a76a",
+      "hasValidationError" : false,
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "lg" : 6,
+        "md" : 6,
+        "sm" : 12,
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "expression",
+          "value" : "!datos && !labels"
+        },
+        "type" : {
+          "type" : "constant",
+          "value" : "Bar"
+        },
+        "data" : {
+          "type" : "expression",
+          "value" : "datos"
+        },
+        "labels" : {
+          "type" : "expression",
+          "value" : "labels"
+        },
+        "setLabels" : {
+          "type" : "constant",
+          "value" : [ "Vacation days left" ]
+        },
+        "legendHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "colors" : {
+          "type" : "constant"
+        },
+        "options" : {
+          "type" : "constant"
+        }
+      },
+      "reference" : "997fb1db-eb43-452a-a180-c5fd670f541a",
+      "hasValidationError" : false,
+      "id" : "pbChart"
+    }, {
+      "type" : "tabsContainer",
+      "dimension" : {
+        "lg" : 6,
+        "md" : 6,
+        "sm" : 12,
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        }
+      },
+      "reference" : "595ba6ab-05cd-4150-9ebe-736397dc7396",
+      "hasValidationError" : false,
+      "id" : "pbTabsContainer",
+      "tabs" : [ {
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "6b424c69-e21a-44ed-a186-9e8cfe0f345d",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "lg" : 12,
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "headers" : {
+                "type" : "constant",
+                "value" : [ "First name", "Last name", "Days available" ]
+              },
+              "content" : {
+                "type" : "expression",
+                "value" : "managerTeamInfo.employeesVacationAvailable"
+              },
+              "columnsKey" : {
+                "type" : "constant",
+                "value" : [ "firstName", "lastName", "daysAvailableCounter" ]
+              },
+              "selectedRow" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "b35d5254-6dd0-44ff-a129-d996c0d65fec",
+            "hasValidationError" : false,
+            "id" : "pbTable"
+          } ] ]
+        },
+        "title" : "Vacation available"
+      }, {
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "f9a4546a-a304-4d2d-871a-c34ad0d9053a",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "lg" : 12,
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "headers" : {
+                "type" : "constant",
+                "value" : [ "First name", "Last name", "Start date", "Number of days", "Return date", "Status" ]
+              },
+              "content" : {
+                "type" : "expression",
+                "value" : "managerTeamInfo.employeesVacationRequests"
+              },
+              "columnsKey" : {
+                "type" : "constant",
+                "value" : [ "firstName", "lastName", "startDate | date", "numberOfDays", "returnDate | date", "status" ]
+              },
+              "selectedRow" : {
+                "type" : "variable",
+                "value" : "teamSelectedRow"
+              }
+            },
+            "reference" : "42f82b04-f2e9-42e9-b0f8-c483254bfbd5",
+            "hasValidationError" : false,
+            "id" : "pbTable"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "lg" : 12,
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "expression",
+                "value" : "teamSelectedRow.status!==\"pending\""
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Review selected vacation request"
+              },
+              "targetUrl" : {
+                "type" : "expression",
+                "value" : "\"/bonita/portal/form/taskInstance/\"+ teamSelectedRow.taskId"
+              },
+              "target" : {
+                "type" : "constant",
+                "value" : "_self"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "primary"
+              }
+            },
+            "reference" : "f57137e0-a8d1-4694-ae31-35e521a12a89",
+            "hasValidationError" : false,
+            "id" : "pbLink"
+          } ] ]
+        },
+        "title" : "Vacation requests"
+      } ]
+    } ] ]
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "lg" : 12,
+      "md" : 12,
+      "sm" : 12,
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "expression",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "teamSelectedRow: {{teamSelectedRow | json}} <br> managerTeamInfo: {{managerTeamInfo | json }}<br>\ndatos: {{datos }}<br>\nlabels: {{labels}}"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      }
+    },
+    "reference" : "4f9b6f3e-de3a-4482-b1e9-9fe2b79d17dc",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ] ],
+  "assets" : [ {
+    "id" : "628eefdc-4740-4033-ad01-2535850624c8",
+    "name" : "vert-offset.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "be1de596-6818-4f0f-9418-e7a278c96754",
+    "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+    "type" : "js",
+    "order" : 3,
+    "external" : false
+  }, {
+    "id" : "04de1f21-301f-427e-9e9a-2af52472db80",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "78dee926-3386-4ee1-acac-a8790e5622a6",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 2,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "managerTeamInfo" : {
+      "type" : "url",
+      "value" : "../API/extension/vacationRequest",
+      "exposed" : false
+    },
+    "teamSelectedRow" : {
+      "type" : "json",
+      "value" : "{}",
+      "exposed" : false
+    },
+    "datos" : {
+      "type" : "expression",
+      "value" : "if($data.managerTeamInfo){\n\treturn $data.managerTeamInfo.employeesVacationAvailable.map(function(selector){\n\t    return selector.daysAvailableCounter;\n\t});\n}",
+      "exposed" : false
+    },
+    "labels" : {
+      "type" : "expression",
+      "value" : "if($data.managerTeamInfo){\r\n\treturn $data.managerTeamInfo.employeesVacationAvailable.map(function(selector){\r\n\t    return selector.firstName + \" \" + selector.lastName;\r\n\t});\r\n}",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "242d6e3c-0833-4cc3-a58a-d9d46701df95",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "VacationManagerProvided"
+}

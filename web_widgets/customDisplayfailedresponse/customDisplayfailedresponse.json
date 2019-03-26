@@ -1,0 +1,31 @@
+{
+  "designerVersion" : "1.3.13",
+  "id" : "customDisplayfailedresponse",
+  "name" : "displayfailedresponse",
+  "lastUpdate" : 1534273123417,
+  "template" : "<!-- Display the error if it is-->\n \n<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<div ng-show=\"ctrl.isError()\">\n    <div class=\"alert alert-danger\">\n        <h3>{{ctrl.getMessage()}}</h3><br>\n        <div ng-repeat=\"expl in ctrl.getExplanations()\">\n            <li><i>{{expl}}</i></li>\n        </div>\n    \n    </div>\n</div>",
+  "controller" : "/**\n * The controller is a JavaScript function that augments the AngularJS scope and exposes functions that can be used in the custom widget template\n * \n * Custom widget properties defined on the right can be used as variables in a controller with $scope.properties\n * To use AngularJS standard services, you must declare them in the main function arguments.\n * \n * You can leave the controller empty if you do not need it.\n */\nfunction ($scope) {\n    \n    this.isError = function () {\n        if ($scope.properties.failedResponseValue === undefined)\n            return false;\n        return $scope.properties.failedResponseValue.hasOwnProperty(\"message\") ;\n    };\n    \n    this.getMessage = function () \n    {\n       if (typeof $scope.properties.failedResponseValue === \"undefined\")\n            return \"\";\n            \n        if($scope.properties.enableDetailedExplanation)\n        {\n            return extractMessage($scope.properties.failedResponseValue.message);\n        }\n        else\n        {\n            if($scope.properties.genericMessage)\n            {\n                return $scope.properties.genericMessage;\n            }\n            else\n            {\n                return \"Please contact admin.\";\n            }\n        }\n       //return $scope.properties.failedResponseValue.message;\n    };\n    this.getExplanations = function () \n    {\n       if (typeof $scope.properties.failedResponseValue === \"undefined\")\n            return \"\";\n        return $scope.properties.failedResponseValue.explanations;\n    };\n    \n    var extractMessage = function (exceptionMessage)\n    {\n        var message = \"\";\n        if (exceptionMessage ==null)\n            return \"\";\n        if (typeof exceptionMessage ===\"undefined\")    \n            return \"\";\n        \n        if (exceptionMessage.indexOf(\"com.bonitasoft\") > -1 || exceptionMessage.indexOf(\"org.bonitasoft\") > -1 )\n        {\n            if(exceptionMessage.indexOf(\"with message =\") > -1)\n            {\n                var textPattern = \"with message =\";\n                var pos = exceptionMessage.indexOf(textPattern);\n                \n                \n                message = exceptionMessage.slice(pos + textPattern.length);\n                message = extractMessage(message.slice(0, endPos));\n                var endPos = message.indexOf(\"Expression\");\n                if(endPos > -1)\n                {\n                    message = message.slice(0, endPos);    \n                }\n                \n            }\n            else\n            {\n                var pos = exceptionMessage.indexOf(\":\");\n                message = exceptionMessage.slice(pos + 1 );    \n            }\n            \n        }\n        else\n        {\n            var endPos = exceptionMessage.indexOf(\"\\r\\n\");\n            message = exceptionMessage.slice(0, endPos);\n        }\n        \n        return message;\n    }\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Failed Response Value",
+    "name" : "failedResponseValue",
+    "type" : "text",
+    "defaultValue" : "This is the initial value",
+    "bond" : "expression"
+  }, {
+    "label" : "Enable Detailed Explanation",
+    "name" : "enableDetailedExplanation",
+    "type" : "boolean",
+    "defaultValue" : true,
+    "bond" : "expression"
+  }, {
+    "label" : "Generic Message",
+    "name" : "genericMessage",
+    "type" : "text",
+    "bond" : "expression"
+  } ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

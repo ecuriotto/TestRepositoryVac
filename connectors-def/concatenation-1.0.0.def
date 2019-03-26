@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>concatenation</id>
+  <version>1.0.0</version>
+  <input name="Input1" type="java.lang.String"/>
+  <input name="Input2" type="java.lang.String"/>
+  <input name="Input3" type="java.lang.String"/>
+  <output name="Output1" type="java.lang.String"/>
+  <page id="parameters">
+    <widget xsi:type="definition:Text" id="input1" inputName="Input1"/>
+    <widget xsi:type="definition:Text" id="input2" inputName="Input2"/>
+    <widget xsi:type="definition:Text" id="input3" inputName="Input3"/>
+  </page>
+</definition:ConnectorDefinition>
